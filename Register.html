@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prachi Dance School  😊</title>
+</head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="register.css">
+<link rel="stylesheet" href="register.js">
+<style>
+    /* CSS Reset */
+    body {
+        font-family: 'Baloo Bhai 2', cursive;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        background: url('img2/mi.jpg.jpg');
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .logo2 {
+        display: inline-block;
+        /* border: solid red; */
+        position: absolute;
+        left: 34;
+        top: 20px;
+    }
+
+    .logo2 img {
+        width: 200px;
+    }
+
+   
+
+    .container {
+        border: 2px solid white;
+        margin: 167px 46px;
+        padding: 5px;
+        width: 36%;
+        border-radius: 20px;
+    }
+
+    .form-group input {
+        font-family: 'Baloo Bhai 2', cursive;
+        text-align: center;
+        display: block;
+        width: 245px;
+        padding: 2px;
+        border: 2px solid black;
+        margin: 15px auto;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+
+    .container h1 {
+        text-align: center;
+        color: blanchedalmond;
+        font-size: 24px;
+    }
+
+    .container button {
+        display: block;
+        width: 40%;
+        margin: 2% auto;
+        font-size: 15px;
+    }
+    .btn {
+        font-family: 'Baloo Bhai 2', cursive;
+        margin: 0px 2px;
+        background-color: black;
+        color: white;
+        padding: 2px 5px;
+        border: 2px solid rgb(37, 36, 36);
+        border-radius: 20px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: gray;
+    }
+
+   
+
+
+</style>
+
+<body>
+    
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="logo2">
+            <img src="img2/Prachi.logo.png" alt="">
+        </div>
+       
+   </header>
+
+   
+   
+   
+    <div class="container">
+        <h1>Join the best dance school now...</h1>
+        <form method="POST" autocomplete="off" name="google-sheet">
+            <div class="form-group">
+                <input type="text" name="Name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="Age" placeholder="Enter your Age" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="Gender" placeholder="Enter your Gender" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="Locality" placeholder="Enter your Locality" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="PhoneNumber" placeholder="Enter your PhoneNumber" required>
+            </div>
+
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+
+    
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzG8P3AN3mAS3plVTzLGjmM0neQtbiHCpuOHq4ISI8FUvcpsEvmKGwkRRLPXQ8fj68AAg/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+    
+</body>
+
+
+</html>

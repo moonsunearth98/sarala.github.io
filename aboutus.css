@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans",sans-serif;
+    box-sizing: border-box;
+    
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+}
+
+.logo1 {
+	display: inline-block;
+	/* border: solid red; */
+	position: absolute;
+	left: 8px;
+	top: 20px;
+}
+
+.logo1 img {
+	width: 200px;
+}    
+
+    .about-section{
+          background: url(img2/bonnie-kittle-GiIZSko7Guk-unsplash.jpg) no-repeat left;
+          background-size: 45%;
+          background-color: #ffffff;
+          overflow: hidden;
+          padding: 100px 0;
+    }
+    .inner-section{
+        width: 59%;
+        float: right;
+        background-color: #fdfdfd;
+        padding: 140px;
+        box-shadow: 10px 10px 8px rgba(0,0,0,0.3);
+    }
+    
